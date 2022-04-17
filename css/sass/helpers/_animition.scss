@@ -1,0 +1,26 @@
+@use "../vars/vars" as *;
+@keyframes anime {
+    0% {
+        top: -20px;
+    }
+    25% {
+        top: 15;
+    }
+    50% {
+        top: -20px;
+    }
+    75% {
+        top: 10px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+@keyframes draw {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: $yellow
+    }
+}

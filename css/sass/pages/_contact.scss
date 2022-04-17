@@ -1,0 +1,106 @@
+@use "../vars/vars" as *;
+#contact {    
+    padding: 100px 50px;
+    .main {
+        width: 100%;
+    }
+    .name {
+        color: $almostBlack;
+        font-size: 25px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .para {
+        margin-top: 30px;
+        color: $yellow;
+        text-align: center;
+        margin-bottom: 110px;
+    }
+    .one {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 50px;        
+        .one, .two {
+            width: calc(50% - 66px);
+            padding: 12px 20px;
+            background: $yellow;
+            color: white;
+            border: none;
+            &::placeholder {
+                color: white;
+            }
+            &:focus {
+                outline: none;
+                border: 1px solid $fiftyBlack;
+            }
+        }
+    }
+    .two {
+        padding: 10px 0;
+        input {
+            width: calc(100% - 26px);
+            padding: 13px;
+            background: $yellow;
+            border: none;
+            &::placeholder {
+                color: white;
+            }            
+            &:focus {
+                outline: none;
+                border: 1px solid $fiftyBlack;
+            }
+        }
+    }
+    .three {
+        padding: 10px 0;
+        textarea {
+            padding: 12px 6px;
+            width: calc(100% - 12px);
+            height: 185.5px;
+            background: #ffe600;
+            border: none;
+            resize: none;
+            &::placeholder {
+                color: white;
+            }
+            &:focus {
+                outline: none;
+                border: 1px solid $fiftyBlack;
+            }
+        }
+    }
+    .four {
+        padding: 10px 0;
+        input {
+            width: 100%;
+            padding: 13px;
+            background: $almostBlack;
+            color: $yellow;
+            border: none;
+            transition: .3s;
+            cursor: pointer;
+            &:hover {
+                border: 1px solid $almostBlack;
+                background-color: white
+            }
+            
+        }
+    }
+}
+@media (max-width: 767px) {
+    .one {
+        display: block !important;
+        .one {
+            margin-bottom: 13px;
+        }
+        .one, .two {
+            width: calc(100% - 40px) !important;
+        } 
+    }
+}
+@media (max-width: 575px) {
+    #contact {
+        padding: 100px 20px;
+    }
+}

@@ -1,0 +1,41 @@
+@use "../helpers/mixin" as *;
+@use "../vars/vars" as *;
+#clients {
+    background-image: url("/img/clients_bg.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    .over {
+        @include overbg($almostBlack, .8, 0)
+    }
+    .name {
+        position: relative;
+        text-align: center;
+        padding-top: 100px;
+        color: white;
+        font: {
+            size: 25px;
+            weight: 100;
+        }
+    }
+    .para {
+        position: relative;
+        margin-top: 25px;
+        color: $yellow;
+        font-size: 15px;
+        text-align: center;
+    }
+    .imgs {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        margin: 180px auto;
+        gap: 20px;
+        padding: 0 10px;    
+        img {
+            width: 70px;
+        }
+    }
+}

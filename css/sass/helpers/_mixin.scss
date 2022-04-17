@@ -1,0 +1,9 @@
+@mixin overbg ($color, $alpha, $top){
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: $top;
+    left: 0;
+    background-color: rgba($color, $alpha);
+    // background-color: rgba(0,0,0,.5);
+}

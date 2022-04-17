@@ -1,0 +1,41 @@
+@use "../vars/vars" as *;
+footer {
+    padding: 18px 50px;
+    background: $almostBlack;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    div {
+        color: $yellow;
+        padding: 22px 0;
+        text-align: center;
+        font-size: 14px;
+    }
+    ul {
+        display: flex;
+        gap: 50px;
+        li {
+            list-style: none;
+            color: white;
+            cursor: pointer;
+            padding: 13px;
+            transition: .8s;
+            &:hover {
+                transform: scale(1.11);
+                border: 1px solid $yellow;
+            }
+        }
+    }
+}
+@media (max-width: 767px) {
+    footer {
+        display: block;
+        ul {
+            justify-content: center;
+            gap: 0;
+            li {
+                margin-right: 30px;
+            }
+        }
+    }
+}

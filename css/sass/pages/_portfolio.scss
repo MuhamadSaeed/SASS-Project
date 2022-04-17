@@ -1,0 +1,69 @@
+@use "../vars/vars" as *;
+@use "../helpers/mixin" as *;
+#portfolio {
+    padding: 120px 0 80px;
+    .info {
+        text-align: center;
+        .name {
+            color: $almostBlack;
+            font-size: 25px;
+            text-transform: uppercase;
+        }
+        .para {
+            margin-top: 30px;
+            color: $yellow;
+        }
+    }
+    .boxs {
+        padding: 100px 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        .box {
+            position: relative;
+            width: fit-content;
+            overflow: hidden;
+            &:hover .over {
+                top: -5px;
+            }   
+        }
+        .over {
+            @include overbg($yellow, .8, 205px); 
+            transition: .5s;               
+            h1 {
+                text-align: center;
+                margin-top: 65px;
+                font: {
+                    weight: 100;
+                    size: 25px;
+                }
+                color: $almostBlack;
+            }
+            p {
+                text-align: center;
+                color: white;
+            }
+        }        
+    }
+        .last {
+            margin-top: 30px;
+            color: $yellow;
+            text-align: center;
+        }
+        .last-img {
+            position: relative;
+            text-align: center;
+            img {
+                position: relative;
+                cursor: pointer;
+                padding: 40px 0;
+                &:hover {
+                    animation: anime;
+                    animation-duration: 1s;
+                    animation-iteration-count: infinite;                    
+                }
+            }
+        }
+    }
